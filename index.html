@@ -1,0 +1,18 @@
+<html>
+<body>
+<img src="" width="auto" height="auto" id="photo">
+<script>
+main();
+function main(){
+fetch("http://108.52.141.24:3000/joe.txt")
+  .then(response => response.text())
+  .then(data => photo.setAttribute('src', data));
+
+setTimeout(function() {
+ main();
+}, 50);
+}
+
+</script>
+</body>
+</html>
